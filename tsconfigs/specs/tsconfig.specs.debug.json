@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.specs.json",
+    "compilerOptions": {
+        "module": "amd",
+        "sourceMap": true,
+        "types": [
+            "requirejs",
+            "babylonjs",
+            "jasmine"
+        ]
+    }
+}

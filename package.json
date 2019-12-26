@@ -1,0 +1,36 @@
+{
+  "name": "getting-started-with-babylonjs-and-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "===>>> Clear <<<===": "",
+    "clear-client": "IF EXIST public\\js (rmdir /s/q public\\js)",
+    "clear-specs": "IF EXIST public\\specs\\js (rmdir /s/q public\\specs\\js)",
+    "clear-all": "npm run clear-client && npm run clear-specs",
+    "===>>> Debug Version of Client <<<===": "",
+    "client-build-debug": "tsc -p tsconfigs/client/tsconfig.client.debug.json",
+    "===>>> Debug Version of Specs <<<===": "",
+    "specs-build-debug": "tsc -p tsconfigs/specs/tsconfig.specs.debug.json",
+    "===>>> Release Version of Client <<<===": "",
+    "client-compile-release": "tsc -p tsconfigs/client/tsconfig.client.release.json",
+    "client-bundle-release": "browserify public/js/Program.js -o public/js/bundle.js",
+    "client-uglify-release": "uglifyjs public/js/bundle.js -o public/js/bundle.min.js",
+    "client-build-release": "npm run client-compile-release && npm run client-bundle-release && npm run client-uglify-release",
+    "===>>> Release Version of Specs <<<===": "",
+    "specs-compile-release": "tsc -p tsconfigs/specs/tsconfig.specs.release.json",
+    "specs-bundle-release": "browserify public/specs/js/specs/GameTests.js -o public/specs/js/specs/bundle.js",
+    "specs-uglify-release": "uglifyjs public/specs/js/specs/bundle.js -o public/specs/js/specs/bundle.min.js",
+    "specs-build-release": "npm run specs-compile-release && npm run specs-bundle-release && npm run specs-uglify-release"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babylonjs": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.5.0",
+    "@types/requirejs": "^2.1.31"
+  }
+}

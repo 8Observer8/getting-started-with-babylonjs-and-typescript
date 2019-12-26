@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.specs.json",
+    "compilerOptions": {
+        "module": "commonjs",
+        "sourceMap": false
+    },
+    "exclude": [
+        "../../specs/RequireConfigSpecRunner.ts"
+    ]
+}
